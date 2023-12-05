@@ -17,7 +17,7 @@ export async function getWeaviateClient() {
     await client.schema.classDeleter().withClassName(className).do();
     const classObj = {
       class: className,
-      vectorizer: "none",
+      vectorizer: "none", // Vectorizer to use for data objects added to this class
     };
 
     /* Collection definition */
